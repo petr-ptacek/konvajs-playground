@@ -15,7 +15,7 @@ import { createRectExample } from '@/modules/shapes/rect';
 
 export default defineComponent({
   mounted(): void {
-    createRectExample(this.$refs.exampleRect);
+    createRectExample(this.$refs.exampleRect as HTMLDivElement);
   }
 });
 </script>
