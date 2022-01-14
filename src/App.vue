@@ -1,4 +1,5 @@
 <template>
+  <AppHeader />
   <main>
     <router-view />
   </main>
@@ -10,10 +11,10 @@ import AppHeader from '@/common/components/AppHeader.vue';
 
 <style scoped>
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <article>
-    <NavigationList :items="navigationItems" />
+    <div class="container">
+      <NavigationList :items="navigationItems" />
+    </div>
   </article>
 </template>
 
@@ -15,6 +17,8 @@ const navigationItems = [
 ];
 </script>
 
-<style>
-
+<style scoped>
+.container {
+  margin-top: 2rem;
+}
 </style>

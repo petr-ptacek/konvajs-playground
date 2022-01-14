@@ -1,35 +1,53 @@
 <template>
-  <div class="navigation-list">
-    <router-link v-for="item of items" :to="item.path" class="navigation-list__item link">
-      {{ item.title }}
-    </router-link>
-  </div>
+  <nav class="navigation">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <router-link
+            v-for="item of items"
+            :key="item.path"
+            :to="item.path"
+            class="navigation__link link"
+        >
+          <span class="navigation-title">
+            {{ item.title }}
+          </span>
+        </router-link>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script lang="ts" setup>
+interface INavItem {
+  title: string;
+  path: string;
+}
+
 interface IProps {
-  items: Array<{
-    title: string;
-    path: string;
-  }>;
+  items: Array<INavItem>;
 }
 
 const { items } = defineProps<IProps>();
 </script>
 
 <style scoped>
-.navigation-list {
+.navigation__list {
   display: grid;
-  gap: 0.5rem;
   grid-template-columns: repeat(auto-fill, minmax(min-content, 20rem));
+  gap: 0.5rem;
 }
 
-.navigation-list__item {
-  padding: 2rem;
+.navigation__item {
   font-size: 2rem;
   display: inline-block;
-  text-align: center;
   background-color: var(--color-black-2);
   border-radius: 4px;
+}
+
+.navigation__link {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

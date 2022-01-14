@@ -16,17 +16,10 @@ const router = createRouter({
     {
       name: 'shapes',
       path: '/shapes',
-      component: () => import('@/views/shapes/Shapes.vue'),
+      component: () => import('@/views/Shapes.vue'),
       meta: {
         title: 'Shapes'
-      },
-      // children: [
-      //   {
-      //     path: '',
-      //     name: 'shape-rect',
-      //     component: () => import('@/views/shapes/Rect.vue')
-      //   }
-      // ]
+      }
     }
   ]
 });
