@@ -7,7 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "konva": "^8.3.2",
+    "konva": "^2.6.0",
     "sass": "^1.48.0",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12"

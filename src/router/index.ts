@@ -12,14 +12,6 @@ const router = createRouter({
       meta: {
         title: 'KonvaJS Playground'
       }
-    },
-    {
-      name: 'shapes',
-      path: '/shapes',
-      component: () => import('@/views/Shapes.vue'),
-      meta: {
-        title: 'Shapes'
-      }
     }
   ]
 });
